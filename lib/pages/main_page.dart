@@ -50,7 +50,7 @@ class _MainPageState extends State<MainPage>
         child: AppBar(
           elevation: 2.0,
           backgroundColor: Colors.blue[900],
-          title: Text('Dashboard', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 30.0, fontFamily: 'Hack')),
+          title: Text('jetLytics', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 30.0, fontFamily: 'Hack')),
           actions: <Widget>
           [
             Container
