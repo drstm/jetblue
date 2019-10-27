@@ -11,7 +11,12 @@ class MyApp extends StatelessWidget
     return MaterialApp
     (
       title: 'Dashboard',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        textTheme: Theme.of(context).textTheme.apply(
+          fontFamily: 'Hack'
+        )
+      ),
       home: MainPage(),
     );
   }
