@@ -2,11 +2,11 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sparkline/flutter_sparkline.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-
+import 'tweet_sentiment_page.dart';
 import 'shop_items_page.dart';
 
 class MainPage extends StatefulWidget
-{ static String tag='main-page';
+{ static String tag = 'main-page';
   @override
   _MainPageState createState() => _MainPageState();
 }
@@ -48,9 +48,9 @@ class _MainPageState extends State<MainPage>
       (
         preferredSize: Size.fromHeight(90),
         child: AppBar(
-          elevation: 1.0,
+          elevation: 2.0,
           backgroundColor: Colors.blue[900],
-          title: Text('jetLytics', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 30.0, fontFamily: 'Hack')),
+          title: Text('Dashboard', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 30.0, fontFamily: 'Hack')),
           actions: <Widget>
           [
             Container
@@ -111,6 +111,7 @@ class _MainPageState extends State<MainPage>
                 ]
               ),
             ),
+            onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => TweetSentiment())),
           ),
           CarouselSlider(
             height: 400.0,
