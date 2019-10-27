@@ -108,9 +108,18 @@ class _MainPageState extends State<MainPage>
                 builder: (BuildContext context) {
                   return Container(
                     width: MediaQuery.of(context).size.width,
-                    margin: EdgeInsets.symmetric(horizontal: 5.0),
+                    margin: EdgeInsets.symmetric(horizontal: 7.0),
                     decoration: BoxDecoration(
-                      color: Colors.white
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(14.0),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Color(0x802196F3),
+                          // spreadRadius: 10,
+                          blurRadius: 2,
+                          // offset: Offset(0, 7), // changes position of shadow
+                        ),
+                      ],
                     ),
                     // child: Text('text $i', style: TextStyle(fontSize: 16.0),)
                     child: Column
@@ -132,28 +141,16 @@ class _MainPageState extends State<MainPage>
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>
                               [
-                                Text('${kpis[i]}', style: TextStyle(color: Colors.blueGrey[900])),
-                                Text('${kpiValues[i]}', style: TextStyle(color: Colors.blue[900], fontWeight: FontWeight.w700, fontSize: 34.0)),
+                                Padding(
+                                  padding: EdgeInsets.all(8.0),
+                                  child: Text('${kpis[i]}', style: TextStyle(color: Colors.blueGrey[900])),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.all(8.0),
+                                  child: Text('${kpiValues[i]}', style: TextStyle(color: Colors.blue[900], fontWeight: FontWeight.w700, fontSize: 34.0))
+                                )
                               ],
-                            ),
-                            // DropdownButton
-                            // (
-                            //   isDense: true,
-                            //   value: actualDropdown,
-                            //   onChanged: (String value) => setState(()
-                            //   {
-                            //     actualDropdown = value;
-                            //     actualChart = chartDropdownItems.indexOf(value); // Refresh the chart
-                            //   }),
-                            //   items: chartDropdownItems.map((String title)
-                            //   {
-                            //     return DropdownMenuItem
-                            //     (
-                            //       value: title,
-                            //       child: Text(title, style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w400, fontSize: 14.0)),
-                            //     );
-                            //   }).toList()
-                            // )
+                            )
                           ],
                         ),
                         Padding(padding: EdgeInsets.only(bottom: 4.0)),
@@ -170,64 +167,6 @@ class _MainPageState extends State<MainPage>
               );
             }).toList(),
           ),
-          // _buildTile(
-          //   Padding
-          //       (
-          //         padding: const EdgeInsets.all(24.0),
-                  // child: Column
-                  // (
-                  //   mainAxisAlignment: MainAxisAlignment.start,
-                  //   crossAxisAlignment: CrossAxisAlignment.start,
-                  //   children: <Widget>
-                  //   [
-                  //     Row
-                  //     (
-                  //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  //       crossAxisAlignment: CrossAxisAlignment.start,
-                  //       children: <Widget>
-                  //       [
-                          
-                  //         Column
-                  //         (
-                  //           mainAxisAlignment: MainAxisAlignment.start,
-                  //           crossAxisAlignment: CrossAxisAlignment.start,
-                  //           children: <Widget>
-                  //           [
-                  //             Text('Revenue', style: TextStyle(color: Colors.blueGrey[900])),
-                  //             Text('\$16K', style: TextStyle(color: Colors.blue[900], fontWeight: FontWeight.w700, fontSize: 34.0)),
-                  //           ],
-                  //         ),
-                  //         DropdownButton
-                  //         (
-                  //           isDense: true,
-                  //           value: actualDropdown,
-                  //           onChanged: (String value) => setState(()
-                  //           {
-                  //             actualDropdown = value;
-                  //             actualChart = chartDropdownItems.indexOf(value); // Refresh the chart
-                  //           }),
-                  //           items: chartDropdownItems.map((String title)
-                  //           {
-                  //             return DropdownMenuItem
-                  //             (
-                  //               value: title,
-                  //               child: Text(title, style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w400, fontSize: 14.0)),
-                  //             );
-                  //           }).toList()
-                  //         )
-                  //       ],
-                  //     ),
-                  //     Padding(padding: EdgeInsets.only(bottom: 4.0)),
-                  //     Sparkline
-                  //     (
-                  //       data: charts[actualChart],
-                  //       lineWidth: 5.0,
-                  //       lineColor: Colors.greenAccent,
-                  //     )
-                  //   ],
-                  // )
-                // ),
-          // ),
           _buildTile(
             Padding
             (
