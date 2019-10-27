@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'pages/main_page.dart';
+import 'pages/login_page.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget
 {
+  final routes = <String, WidgetBuilder>{
+    LoginPage.tag: (context) => LoginPage(),
+    MainPage.tag: (context) => MainPage(),
+  };
   @override
   Widget build(BuildContext context)
   {
@@ -17,7 +22,8 @@ class MyApp extends StatelessWidget
           fontFamily: 'Hack'
         )
       ),
-      home: MainPage(),
+      home: LoginPage(),
+      routes: routes,
     );
   }
 }

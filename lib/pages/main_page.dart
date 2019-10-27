@@ -6,7 +6,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'shop_items_page.dart';
 
 class MainPage extends StatefulWidget
-{
+{ static String tag='main-page';
   @override
   _MainPageState createState() => _MainPageState();
 }
@@ -37,9 +37,9 @@ class _MainPageState extends State<MainPage>
       (
         preferredSize: Size.fromHeight(90),
         child: AppBar(
-          elevation: 2.0,
+          elevation: 1.0,
           backgroundColor: Colors.blue[900],
-          title: Text('Dashboard', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 30.0, fontFamily: 'Hack')),
+          title: Text('jetLytics', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 30.0, fontFamily: 'Hack')),
           actions: <Widget>
           [
             Container
