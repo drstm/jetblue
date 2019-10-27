@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget
     return MaterialApp
     (
       title: 'Dashboard',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
         textTheme: Theme.of(context).textTheme.apply(

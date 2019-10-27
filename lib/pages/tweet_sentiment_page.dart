@@ -43,6 +43,7 @@ class _TweetSentimentState extends State<TweetSentiment>{
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'User Satisfaction Score',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -52,7 +53,7 @@ class _TweetSentimentState extends State<TweetSentiment>{
           child: AppBar(
           elevation: 2.0,
           backgroundColor: Colors.blue[900],
-          title: Text('User Satisfaction Score',style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 25.0, fontFamily: 'Hack')),
+          title: Text('User Satisfaction Score',style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontFamily: 'Hack')),
         )),
         body: !isData ? new Center(
                 child: new CircularProgressIndicator(),
@@ -89,22 +90,25 @@ class _TweetSentimentState extends State<TweetSentiment>{
           _buildTile(
             Padding
             (
-              padding: const EdgeInsets.all(24.0),
+              padding: const EdgeInsets.all(14.0),
               child: Row
               (
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>
                 [
-                  Column
-                  (
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>
-                    [
-                      Text(tweetList[0].tweet, style: TextStyle(color: Colors.blueGrey[900])),
-                      Text(tweetList[0].sentiment.toString(), style: TextStyle(color: Colors.yellow[900], fontWeight: FontWeight.w700, fontSize: 15.0))
-                    ],
+                  Expanded(  
+                    child: Column
+                    (
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>
+                      [
+                        Text(tweetList[0].tweet, style: TextStyle(color: Colors.blueGrey[900])),
+                        Spacer(),
+                        Text(tweetList[0].sentiment.toStringAsFixed(2), style: TextStyle(color: Colors.yellow[900], fontWeight: FontWeight.w700, fontSize: 15.0))
+                      ],
+                    )
                   )
                 ]
               ),
@@ -113,22 +117,25 @@ class _TweetSentimentState extends State<TweetSentiment>{
           _buildTile(
             Padding
             (
-              padding: const EdgeInsets.all(24.0),
+              padding: const EdgeInsets.all(14.0),
               child: Row
               (
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>
                 [
-                  Column
-                  (
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>
-                    [
-                      Text(tweetList[5].tweet, style: TextStyle(color: Colors.blueGrey[900])),
-                      Text(tweetList[5].sentiment.toString(), style: TextStyle(color: Colors.yellow[900], fontWeight: FontWeight.w700, fontSize: 15.0))
-                    ],
+                  Expanded(
+                    child:Column
+                    (
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>
+                      [
+                        Text(tweetList[5].tweet, style: TextStyle(color: Colors.blueGrey[900])),
+                        Spacer(),
+                        Text(tweetList[5].sentiment.toStringAsFixed(2), style: TextStyle(color: Colors.yellow[900], fontWeight: FontWeight.w700, fontSize: 15.0))
+                      ],
+                    )
                   )
                 ]
               ),
@@ -137,22 +144,25 @@ class _TweetSentimentState extends State<TweetSentiment>{
           _buildTile(
             Padding
             (
-              padding: const EdgeInsets.all(24.0),
+              padding: const EdgeInsets.all(14.0),
               child: Row
               (
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>
                 [
-                  Column
-                  (
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>
-                    [
-                      Text(tweetList[9].tweet, style: TextStyle(color: Colors.blueGrey[900])),
-                      Text(tweetList[9].sentiment.toString(), style: TextStyle(color: Colors.yellow[900], fontWeight: FontWeight.w700, fontSize: 15.0))
-                    ],
+                  Expanded(
+                    child:Column
+                    (
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>
+                      [
+                        Text(tweetList[9].tweet, style: TextStyle(color: Colors.blueGrey[900])),
+                        Spacer(),
+                        Text(tweetList[9].sentiment.toStringAsFixed(2), style: TextStyle(color: Colors.yellow[900], fontWeight: FontWeight.w700, fontSize: 15.0))
+                      ],
+                    )
                   )
                 ]
               ),
@@ -161,22 +171,25 @@ class _TweetSentimentState extends State<TweetSentiment>{
           _buildTile(
             Padding
             (
-              padding: const EdgeInsets.all(24.0),
+              padding: const EdgeInsets.all(14.0),
               child: Row
               (
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>
                 [
-                  Column
-                  (
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>
-                    [
-                      Text(tweetList[7].tweet, style: TextStyle(color: Colors.blueGrey[900])),
-                      Text(tweetList[7].sentiment.toString(), style: TextStyle(color: Colors.yellow[900], fontWeight: FontWeight.w700, fontSize: 15.0))
-                    ],
+                  Expanded(
+                    child:Column
+                    (
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>
+                      [
+                        Text(tweetList[7].tweet, style: TextStyle(color: Colors.blueGrey[900])),
+                        Spacer(),
+                        Text(tweetList[7].sentiment.toStringAsFixed(2), style: TextStyle(color: Colors.yellow[900], fontWeight: FontWeight.w700, fontSize: 15.0))
+                      ],
+                    )
                   )
                 ]
               ),
@@ -199,7 +212,7 @@ class _TweetSentimentState extends State<TweetSentiment>{
                     children: <Widget>
                     [
                       Text(tweetList[8].tweet, style: TextStyle(color: Colors.blueGrey[900])),
-                      Text(tweetList[8].sentiment.toString(), style: TextStyle(color: Colors.yellow[900], fontWeight: FontWeight.w700, fontSize: 15.0))
+                      Text(tweetList[8].sentiment.toStringAsFixed(2), style: TextStyle(color: Colors.yellow[900], fontWeight: FontWeight.w700, fontSize: 15.0))
                     ],
                   )
                 ]
